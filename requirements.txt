@@ -1,0 +1,9 @@
+torch
+transformers
+accelerate
+nnsight
+einops
+jupyterlab
+numpy
+pandas
+matplotlib
