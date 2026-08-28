@@ -33,7 +33,7 @@ Alternative explanations and causal interventions will need to be tested.
 
 ## Phase 1
 
-Status: In progress
+Status: Complete
 
 ### Goal
 
