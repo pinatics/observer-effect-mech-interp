@@ -47,26 +47,41 @@ Establish a reproducible environment in which we can:
 
 ### Experiment Log
 
-Date:
+Date: 2026-08-28
 
-Model:
+Model: Qwen/Qwen3-4B
 
-GPU:
+GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition
 
-Prompt:
+Prompt: The Eiffel Tower is in
 
-Layer:
+Layer: 18
 
-Token position:
+Token position: Final token position (-1), token = "Ġin"
 
-Activation shape:
+Activation shape: [1, 7, 2560]; selected final-token activation shape = [2560]
 
-Output:
+Output: Top predicted next token = " Paris" (~79.78% probability)
 
 Observations:
+- Input shape was [1, 7].
+- Forward-pass logits shape was [1, 7, 151936].
+- Layer 18 activation was successfully captured with a forward hook.
+- Layer 18 activation shape was [1, 7, 2560].
+- Final-token activation L2 norm was approximately 50.4057.
+- The no-op hook produced exactly the same logits as the original forward pass.
+- Maximum absolute logit difference was 0.0.
+- torch.allclose returned True.
+- Original and hooked runs both predicted " Paris" as the top next token.
 
 Unexpected results:
+- Tokenizer length (151669), tokenizer vocab_size (151643), and model vocab_size (151936) were different. The reason has not yet been investigated.
 
 Interpretation:
+- The model forward pass and activation-capture pipeline are working.
+- Internal representations can be observed at a specified transformer layer and token position.
+- The observational hook did not perturb the model output in this sanity check.
+- Activation differences alone would not establish a causal mechanism; causal interventions will be required later.
 
 Next question:
+Can the validated activation-capture pipeline detect systematic internal-state differences between the Control, Neutral, Silent, and Report experimental conditions?
