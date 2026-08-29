@@ -38,7 +38,7 @@ An activation difference alone will not be treated as evidence of a causal mecha
 
 - [x] Phase 0 — Research question and experimental framing
 - [x] Phase 1 — Environment, model inference, and activation access
-- [ ] Phase 2 — Behavioral experiments
+- [x] Phase 2 — Behavioral experiments
 - [ ] Phase 3 — Experimental protocol
 - [ ] Phase 4 — Activation analysis
 - [ ] Phase 5 — Causal interventions
