@@ -85,3 +85,38 @@ Interpretation:
 
 Next question:
 Can the validated activation-capture pipeline detect systematic internal-state differences between the Control, Neutral, Silent, and Report experimental conditions?
+
+## Phase 2 — Behavioral Exploration
+
+Status: Complete
+
+### What was tested
+
+Exploratory binary decision tasks were evaluated under four prompting conditions:
+
+- Control
+- Neutral
+- Silent self-directed attention
+- Explicit Report
+
+Qwen3-4B was run deterministically with `do_sample=False` and `enable_thinking=False`.
+
+### Main behavioral observation
+
+Across the three exploratory tasks, the final discrete A/B choice did not change across conditions.
+
+However, next-token A-vs-B logit margins revealed differences that were not visible from the final answer alone.
+
+In two of the three tasks, the Silent condition reduced absolute preference strength relative to both Control and Neutral.
+
+### Candidate hypothesis for Phase 3
+
+Self-directed attention may weaken an already strong response tendency, moving the model's A-vs-B next-token logit margin toward the decision boundary without necessarily changing the final discrete choice.
+
+This is an exploratory hypothesis, not a causal conclusion.
+
+Alternative explanations including prompt wording, prompt length, additional instruction effects, token-position differences, and attention changes remain unresolved and require matched controls.
+
+### Next step
+
+Phase 3 will lock the experimental protocol, prompt set, metrics, and matched controls before mechanistic activation analysis.
