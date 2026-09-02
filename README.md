@@ -1,5 +1,11 @@
 # Observer Effect in Language Models
 
+## Research Question
+
+Does directing a language model's attention toward its own current response tendency alter its internal representations and downstream behavior?
+
+If a change occurs, can it be specifically associated with the self-directed manipulation, or can it be explained by simpler alternatives such as prompt wording, additional instructions, attention redistribution, or explicit reporting?
+
 ## Why This Question Matters
 
 I became interested in a simple problem: when we ask a language model to inspect or report its own response tendency, we often treat the answer as if we are simply measuring something that was already there.
@@ -12,16 +18,7 @@ That raises the mechanistic question behind this project:
 
 I do not want to stop at showing that two prompts produce different outputs or activations. Different prompts naturally do that. I want to test whether self-directed attention produces a measurable behavioral change, locate where any corresponding internal change appears, and then test whether that internal change plays a causal role in the behavior.
 
-In other words:
-
 > **We may not be passively observing a model's response tendency. Asking the model to observe it may itself change the computation.**
-
-## Research Question
-
-Does directing a language model's attention toward its own current response tendency alter its internal representations and downstream behavior?
-
-If a change occurs, can it be specifically associated with the self-directed manipulation, or can it be explained by simpler alternatives such as prompt wording, additional instructions, attention redistribution, or explicit reporting?
-
 
 ## Initial Experimental Conditions
 
